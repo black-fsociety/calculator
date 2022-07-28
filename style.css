@@ -1,0 +1,224 @@
+:root {
+    font-size: 32px;
+    --primaryFont: 'League Spartan', sans-serif;
+    --primaryTextColor: hsl(0, 0%, 100%);
+    --bodyBackgroundColor: hsl(222, 26%, 31%);
+    --keyBackgroundColor: hsl(30, 25%, 89%);
+    --keyColor: hsl(221, 14%, 31%);
+    --keyShadowColor: hsl(28, 16%, 65%);
+    --slider-ButtonsBackgroundColor: hsl(223, 31%, 20%);
+    --sliderThumb-equalBackgroundColor: hsl(6, 63%, 50%);
+    --equalShadowColor: hsl(6, 70%, 34%);
+    --equalColor: hsl(0, 0%, 100%);
+    --reset-DelBackgroundColor: hsl(225, 21%, 49%);
+    --reset-DelShadowColor: hsl(224, 28%, 35%);
+    --inputBackground: hsl(224, 36%, 15%);
+    --inputColor: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primaryFont);
+    transition: all 1s ease-in-out;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bodyBackgroundColor);
+    padding: 3rem 0;
+}
+
+.container {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.head {
+    width: 100%;
+    display: flex;
+    margin-bottom: 0.3rem;
+}
+
+.title h2, .themes h3, .themes span {
+    color: var(--inputColor);
+}
+
+.title {
+    width: 75%;
+    font-size: 0.5rem;
+}
+
+
+.themes {
+    width: 25%;
+    display: flex;
+    gap: 0.2rem;
+    font-size: 0.5rem;
+}
+
+.themes h3 {
+    align-self: center;
+    font-size: 0.35rem;
+}
+
+.theme-container {
+    position: relative;
+}
+
+.slider-counter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 0.3rem;
+    margin-bottom: 0.1rem;
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 100%;
+}
+
+.slider-counter span {
+    text-align:center;
+}
+
+input[type='range'] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 10px;
+    background-color: var(--slider-ButtonsBackgroundColor);
+    padding: 0.3rem 0.1rem;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--sliderThumb-equalBackgroundColor);
+}
+
+.input-field {
+    width: 100%;
+    height: 100px;
+    padding: 1rem 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background-color: var(--inputBackground);
+    color: var(--inputColor);
+    font-size: 1rem;
+    text-align: right;
+    overflow: hidden;
+}
+
+.buttons {
+    display: grid;
+    grid-template-areas: 
+        'seven eight nine del'
+        'four five six plus'
+        'one two three minus'
+        'deci zero divide multi'
+        'reset reset equals equals';
+    gap: 0.5rem;
+    background-color: var(--slider-ButtonsBackgroundColor);
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 0.3rem 0;
+    border-radius: 10px;
+    border: none;
+    font-size: var(--primaryFont);
+    cursor: pointer;
+    background-color: var(--keyBackgroundColor);
+    box-shadow: 0 0.1rem 0 var(--keyShadowColor);
+    color: var(--keyColor);
+}
+
+.btn:hover, .btn:focus {
+    opacity: 0.7;
+}
+
+.one-btn {
+    grid-area: one;
+}
+
+.two-btn {
+    grid-area: two;
+}
+
+.three-btn {
+    grid-area: three;
+}
+
+.four-btn {
+    grid-area: four;
+}
+
+.five-btn {
+    grid-area: five;
+}
+
+.six-btn {
+    grid-area: six;
+}
+
+.seven-btn {
+    grid-area: seven;
+}
+
+.eight-btn {
+    grid-area: eight;
+}
+
+.nine-btn {
+    grid-area: nine;
+}
+
+.zero-btn {
+    grid-area: zero;
+}
+
+.plus-btn {
+    grid-area: plus;
+}
+
+.minus-btn {
+    grid-area: minus;
+}
+
+.multiply-btn {
+    grid-area: multi;
+}
+
+.divide-btn {
+    grid-area: divide;
+}
+
+.decimal-btn {
+    grid-area: deci;
+}
+
+.reset-btn {
+    grid-area: reset;
+}
+
+.equal-btn {
+    grid-area: equals;
+    background-color: var(--sliderThumb-equalBackgroundColor);
+    box-shadow: 0 0.1rem 0 var(--equalShadowColor);
+    color: var(--equalColor);
+}
+
+.reset-btn, .del-btn {
+    background-color: var(--reset-DelBackgroundColor);
+    box-shadow: 0 0.1rem 0 var(--reset-DelShadowColor);
+    color: var(--primaryTextColor);
+    font-size: 0.7rem;
+}

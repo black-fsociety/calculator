@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <script src="theme.js" defer></script>
+  <script src="main.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; color: var(--primaryTextColor); margin-bottom: 1rem;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="head">
+      <div class="title">
+        <h2>calc</h2>
+      </div>
+      <div class="themes">
+        <h3>Theme</h3>
+        <div class="theme-container">
+          <div class="slider-counter">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+          </div>
+          <div class="slider">
+            <input type="range" name="" id="theme-slider" min="1" max="3" value="1">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-field">
+    </div>
+
+    <div class="buttons">
+      <button class="btn one-btn">1</button>
+      <button class="btn two-btn">2</button>
+      <button class="btn three-btn">3</button>
+      <button class="btn four-btn">4</button>
+      <button class="btn five-btn">5</button>
+      <button class="btn six-btn">6</button>
+      <button class="btn seven-btn">7</button>
+      <button class="btn eight-btn">8</button>
+      <button class="btn nine-btn">9</button>
+      <button class="btn zero-btn">0</button>
+      <button class="btn del-btn">Del</button>
+      <button class="btn plus-btn">+</button>
+      <button class="btn minus-btn">-</button>
+      <button class="btn multiply-btn">x</button>
+      <button class="btn decimal-btn">.</button>
+      <button class="btn divide-btn">/</button>
+      <button class="btn reset-btn">Reset</button>
+      <button class="btn equal-btn">=</button>
+    </div>
+  </div>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Desmond Asiedu Asamoah</a>.
+  </div>
+</body>
+</html>
